@@ -9,7 +9,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ffyud
 
 # Build settings
-theme: paloma jekyll
+theme: paloma-jekyll
 
 # Exclude from processing.
 # The following items will not be processed, by default.
