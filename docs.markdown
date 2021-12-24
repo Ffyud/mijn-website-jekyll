@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Docs"
+permalink: /docs/
 ---
 
 <h1>Docs</h1>
