@@ -44,7 +44,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    paloma-jekyll (0.2.3)
+    paloma-jekyll (0.2.4)
       jekyll (~> 4.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
