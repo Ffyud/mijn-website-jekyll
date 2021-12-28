@@ -1,3 +1,6 @@
 # Mijn website
-Maar dan gemaakt met Jekyll
-Gebruikt van het paloma-jekyll theme.
+Gebouwd met hulp van Jekyll en ontworpen met een eigen Jekyll thema [paloma-jekyll](https://github.com/Ffyud/paloma-jekyll).
+
+```
+bundle exec jekyll serve
+```
