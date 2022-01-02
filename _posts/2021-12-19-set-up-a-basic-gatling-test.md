@@ -11,7 +11,7 @@ categories: [Testing]
 
 - JDK
 - Maven
-- IntelliJ
+- IntelliJ (or whatever IDE you prefer)
   
 ## 1 Set-up the project template
 
@@ -66,7 +66,7 @@ class MyFirstTest extends Simulation {
 }
 ```
 
-### 3.2 Add http config to the class
+### 3.2 Add http config
 
 Add a piece of configuration with the URL and the necessary headers, depending ofcourse on the application you want to test against.
 
@@ -75,19 +75,20 @@ val httpConf = http.baseUrl("the.url.here)
   .header("Accept", "application/json")
 ```
 
-### 3.3 Voeg een testscenario aan je class toe
+### 3.3 Add a test scenario
 
-In Gatling definieer je testscenario's met daarin wat je wil gaan doen en wat je verwacht. Je kan het scenario een naam naar keuze geven. In dit voorbeeld wordt een HTTP GET request gedaan naar het endpoint gemeente.
+In the test scenario part you can define what you need to test, including your expectations. You can name the scenario anything you like. In this example a *HTTP GET request* is performed to the endpoint "countries", which is the part that comes after the *baseUrl* defined in the http config.
 
 ``` scala
 val testscenario = scenario("Get information from endpoint")
-  .exec(http("Get alle users")
-    .get("users"))
+  .exec(http("Get all countries")
+    .get("countries"))
 ```
 
-### 3.4 Voeg een load scenario aan je class toe
+### 3.4 Add a load scenario
 
-Als laatste stap in de test voeg je een load scenario toe, waarin je bepaald hoe het testscenario uitgevoerd moet worden. Bijvoorbeeld hoevaak je de bevraging wil doen en met hoeveel gebruikers. 
+The third and final part you need to add is the load scenario. Here you'll describe how the test scenario should be performed, like how many users, how many requests or for what duration. The example below will simulate just one user doing the request.
+
 
 ```scala
 setUp(
@@ -95,7 +96,7 @@ setUp(
 ).protocols(httpConf)
 ```
 
-In onderstaande voorbeeld wordt er simpelweg 1 bevraging door 1 gebruiker gedaan.
+The class is now complete and should look something like the example below.
 
 ```scala
 import io.gatling.core.Predef._
@@ -106,8 +107,8 @@ class MyFirstTest extends Simulation {
                .header("Accept", "application/json")
  
   val testscenario = scenario("Get information from endpoint")
-    .exec(http("Get alle users")
-      .get("users"))
+    .exec(http("Get all countries")
+      .get("countries"))
  
   setUp(
     testscenario.inject(atOnceUsers(1))
@@ -117,55 +118,55 @@ class MyFirstTest extends Simulation {
 
 ## 4 Starting a test
 
-Testen aftrappen kan lokaal direct vanuit Intellij of met behulp van een Maven commando (dankzij de gatling-maven-plugin).
+Kicking off the test can be done directly from IntelliJ or with the Maven command (which the gatling-maven-plugin has provided).
 
-Als er fouten optreden bij het starten van een test is de kans groot dat er een versie mismatch is tussen de versie van de Scala SDK, Java SDK of Gatling.
+Whenever errors occur when starting a test, chances are that a mismatch exists between the versions of the Scala SDK, the Java SDK or Gatling.
 
-### Vanuit Intellij
+### From Intellij
 
-Rechtermuisklik op src/test/scala/Engine en kies voor Run 'Engine'. Druk gerust op enter als er gevraagd wordt om een optional description.
+Right click on src/text/scala/Engin and pick *Run 'Engine'*. Just press enter when asked for an optional description.
 
-### Met Maven
+### With Maven
 
-Gebruik hiertoe het commando wat is toegevoegd aan de Maven Lifecycle of klik dit commando aan in Intellij.
+Use the Gatling specific command that exists in the Maven Lifecycle or click on the command inside IntelliJ.
 
 ```powershell
 mvn gatling:test
 ```
 
-## 5 Viewing the test results
+## 5 Viewing the results
 
-Gatling zal een klein overzichtje uitdraaien in de terminal en genereert ook een leesbaar dossier in HTML. Het dossier vindt je onder /target in een map die vernoemd is naar de naam van je class met een timestamp. 
+Gatling will produce a little testreport inside the terminal. You'll find a full testreport in friendly readable HTML form inside the */target* folder. The name of the report is the name of the class and a timestamp.
 
 ## 6 What's next
 
-### 6.1 Example #1: voeg een stap toe aan het testscenario
+### 6.1 Example #1: Add steps to the test scenario
 
-Haal de code exec() uit de val testscenario en plaats deze los in je class als def. Daarnaast voeg je nog een def toe, maar dan voor een ander endpoint.
+Extract the code *exec()* from the *val testscenario* and place in the class as seperate definitions. Now you can create another defintion beside this one that does a request to another endpoint, like in this example.
 
 ``` scala
-  def getAlleGemeenten() = {
-    exec(http("Alle gemeentes ophalen")
-      .get("gemeenten"))
+  def getAllCountries() = {
+    exec(http("Get all countries")
+      .get("countries"))
   }
  
-  def getAlleLanden() = {
-    exec(http("Alle landen ophalen")
-      .get("landen"))
+  def getAllContinents() = {
+    exec(http("Get all continents")
+      .get("continents"))
   }
 ```
 
-Vervolgens roep je beide definitions aan in het testscenario. Zodoende heb je twee bevragingen toegevoegd aan één scenario.
+Then you call these definitions from the test scenario, which now contains two calls.
 
 ``` scala
-val testscenario = scenario("Ophalen van referentiegegevens")
-    .exec(getAlleGemeenten())
-    .exec(getAlleLanden())
+val testscenario = scenario("Get information from endpoint")
+    .exec(getAllCountries())
+    .exec(getAllContinents())
 ```
 
-### 6.2 Example #2: voeg een verwachting toe aan het load scenario
+### 6.2 Example #2: Add an assertion to the load scenario
 
-Onderaan het load scenario voeg je assertions toe. In dit voorbeeld kiezen we ervoor dat de responseTime niet hoger dan 1 seconde mag zijn.
+You can add assertions below the load scenario. In this example the *responseTime* should not be higher than 1 second.
 
 ``` scala
 setUp(
@@ -174,25 +175,23 @@ setUp(
     .assertions(global.responseTime.max.lt(1000))
 ```
 
-### 6.3 Example #3: voeg meerdere headers toe
+### 6.3 Example #3: Add multiple headers
 
-De headers die je nodig hebt kan je in een Map plaatsen zodat je ze makkelijk kan hergebruiken over de scenario's heen.
+The headers can be put inside a *Map* so you can reuse them in multiple scenarios.
 
 ``` scala
-val alleHeaders= Map("Content-Type" -> "application/javascript", "Accept" -> "text/html")
-val httpConf = http.baseUrl("het.adres.waar.ik.tegenaan.test").header(alleHeaders)
+val allHeaders = Map("Content-Type" -> "application/javascript", "Accept" -> "text/html")
+
+val httpConf = http.baseUrl("the.url.here").header(alleHeaders)
 ```
 
 ### 6.4 Use the documentation
 
-Gatling offers alot of cool features. Here are just a few that make your test more interesting:
+Gatling offers alot of cool features. Here are just a few that make your test more interesting and powerful:
 
 - Use data (or what Gatling calls *Feeders*): [Feeder definition](https://gatling.io/docs/gatling/reference/current/core/session/feeder/)
 - Expand your load scenario (or *Injection profile*): [Injection](https://gatling.io/docs/gatling/reference/current/core/injection/)
 - Add expectations (i.e. Assertions): [Assertions](https://gatling.io/docs/gatling/reference/current/core/assertions/)
 - Put your Gatling tests in an automated pipeline: [Jenkins Plugin](https://gatling.io/docs/gatling/reference/current/extensions/jenkins_plugin/)
 
- Er bestaat ook een Gatling Recorder waarmee je een scenario kan "opnemen" door een applicatie te openen. Al het netwerkverkeer wordt dan vastgelegd. Dit levert een HAR bestand op wat je in één klap kan injecteren in je testclass.
-
- 
-https://github.com/Ffyud/gatling-demo.git
+There is also a *Gatling Recorder* which allows you to "record" the networktraffic while using an application. That traffic will then be saved to a *HAR file* that you can then insert in your testclass.
