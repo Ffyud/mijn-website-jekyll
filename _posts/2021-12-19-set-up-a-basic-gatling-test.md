@@ -20,7 +20,7 @@ The project is set-up by creating a Gatling template (called an [*Archetype*](ht
 mvn archetype:generate -DarchetypeGroupId=io.gatling.highcharts -DarchetypeArtifactId=gatling-highcharts-maven-archetype
 ```
 
-You will be asked to supply a groupId, artifactId, version and package. Confirm afterwards by pressing Enter or typing *y*.
+You will be asked to supply a [groupId, artifactId, version and package](https://maven.apache.org/guides/mini/guide-naming-conventions.html). Confirm afterwards by pressing Enter or typing *y*.
 
 If all goes well, you'll read *BUILD SUCCESS*.
 
