@@ -6,7 +6,6 @@ categories: [Testing]
 
 # Set up a basic Gatling test
 
-
 ## 0 Requirements
 
 - JDK
@@ -15,7 +14,7 @@ categories: [Testing]
   
 ## 1 Set-up the project template
 
-The project is setup by creating a Gatling template (called an *Archetype* in Maven). By using the the following terminal command you'll set up the standard folder structure in which the Gatling tests will be created.
+The project is set-up by creating a Gatling template (called an [*Archetype*](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html) in Maven). By using the the following Maven command you set up the standard folder structure in which the Gatling tests will be created.
 
 ```powershell
 mvn archetype:generate -DarchetypeGroupId=io.gatling.highcharts -DarchetypeArtifactId=gatling-highcharts-maven-archetype
@@ -27,17 +26,17 @@ If all goes well, you'll read *BUILD SUCCESS*.
 
 ## 2 Open the project
 
-The project is now ready and located at the location where you ran the previous command. Start IntelliJ and open the project. IntelliJ will start retrieving all the dependencies, which can take a while.
+The project is now ready and located at the location where you ran the previous command. Start IntelliJ and open the project. IntelliJ will begin retrieving all the dependencies, which can take a while.
 
 - Check the *pom.xml* for the following dependencies: *gatling-charts-highcharts*, *gatling-app* and *gatling-recorder*.
 
-- Check if the *pom.xml* contains the build plugin *gatling-maven-plugin*. This plugin adds a Maven lifecycle command with which you can start the Gatling tests later on.
+- Check if the *pom.xml* contains the build plugin *gatling-maven-plugin*. This plugin adds a [Maven Build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) command with which you can start the Gatling tests later on.
 
 Also important:
 
- - See if IntelliJ has the Scala plugin (via File > Settings > Plugins).
+ - See if IntelliJ has the [Scala plugin](https://plugins.jetbrains.com/plugin/1347-scala) (via File > Settings > Plugins).
 
- - When opening a Scala file inside the folder src/test/scala, IntelliJ  will ask you to install the Scala SDK. Go ahead and install the SDK. I chose the scala-sdk-2.12.15.
+ - When opening a Scala file inside the folder *src/test/scala*, IntelliJ  will ask you to install the [Scala SDK](https://www.scala-lang.org/). Go ahead and install the SDK. I chose the scala-sdk-2.12.15.
 
 ## 3 Writing a test
 
@@ -49,7 +48,7 @@ A Gatling test lives inside a class and consists of 3 main ingredients:
 
 ### 3.1 Create a class 
 
-Right click inside the src/test/scala folder and create a new Scala Class with a name of your choice. For example MyFirstTest (starting with a capital letter).
+Right click inside the src/test/scala folder and create a new *Scala Class* with a name of your choice. For example *MyFirstTest* (starting with a capital letter).
 
 Add the following imports to the very top of the class.
 
@@ -124,11 +123,11 @@ Whenever errors occur when starting a test, chances are that a mismatch exists b
 
 ### From Intellij
 
-Right click on src/text/scala/Engin and pick *Run 'Engine'*. Just press enter when asked for an optional description.
+Right click on src/text/scala/Engine and pick *Run 'Engine'*. Just press enter when asked for an optional description.
 
 ### With Maven
 
-Use the Gatling specific command that exists in the Maven Lifecycle or click on the command inside IntelliJ.
+Use the Gatling specific command that exists in the Maven Build Lifecycle or click on the command inside IntelliJ.
 
 ```powershell
 mvn gatling:test
@@ -136,13 +135,15 @@ mvn gatling:test
 
 ## 5 Viewing the results
 
-Gatling will produce a little testreport inside the terminal. You'll find a full testreport in friendly readable HTML form inside the */target* folder. The name of the report is the name of the class and a timestamp.
+Gatling will produce a little test report inside the terminal. You'll find a full testreport in readable HTML format inside the */target* folder. It is named after the name of the class appended with a timestamp.
 
 ## 6 What's next
 
 ### 6.1 Example #1: Add steps to the test scenario
 
-Extract the code *exec()* from the *val testscenario* and place in the class as seperate definitions. Now you can create another defintion beside this one that does a request to another endpoint, like in this example.
+Extract the *exec()* part from the *val testscenario* and place it the class as seperate definition. 
+
+Now you can create another definition beside this one that does a request to another endpoint, like in this example.
 
 ``` scala
   def getAllCountries() = {
@@ -194,4 +195,4 @@ Gatling offers alot of cool features. Here are just a few that make your test mo
 - Add expectations (i.e. Assertions): [Assertions](https://gatling.io/docs/gatling/reference/current/core/assertions/)
 - Put your Gatling tests in an automated pipeline: [Jenkins Plugin](https://gatling.io/docs/gatling/reference/current/extensions/jenkins_plugin/)
 
-There is also a *Gatling Recorder* which allows you to "record" the networktraffic while using an application. That traffic will then be saved to a *HAR file* that you can then insert in your testclass.
+There is also a [Gatling Recorder](https://gatling.io/docs/gatling/reference/current/http/recorder/) which allows you to "record" the network traffic while using an application. That traffic will then be saved to a *HAR file* that you can then insert in your test class.
