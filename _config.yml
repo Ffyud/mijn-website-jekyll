@@ -9,6 +9,8 @@ github_username:  ffyud
 # Build settings
 theme: paloma-jekyll
 
+permalink: /:title
+
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
