@@ -4,9 +4,11 @@ title: "Build a website with Jekyll and publish it"
 categories: [web, hosting]
 ---
 
+*under construction*
+
 # Build a website with Jekyll and publish it
 
-With the [Jekyll](https://jekyllrb.com/) framework (or [static website](https://en.wikipedia.org/wiki/Static_web_page) generator), you can create a proper website in a short amount of time and with little technical knowlegde. 
+With the [Jekyll](https://jekyllrb.com/) framework (or [static website](https://en.wikipedia.org/wiki/Static_web_page) generator), you can create a proper website in a short amount of time and with little technical knowledge.. 
 
 Websites made with Jekyll are simple, easy to maintain and versatile, since they are only static. Meaning it basically is just a bunch of files, without any database like for instance Wordpress needs. What's also nice is the fact that you can publish your website online for free on a lot of places, like Github Pages, Netlify or Digital Ocean.
 
@@ -14,12 +16,36 @@ Websites made with Jekyll are simple, easy to maintain and versatile, since they
 
 In order to build a Jekyll website you'll have to set up a couple of requirements on your own machine.
 
-- Github (or any other way of using [Git](https://git-scm.com))
+- A Github account 
+- Git installed locally
 - Ruby
 
 ### 1.1 Set-up Github
 
+- Register an account on [Github](https://github.com/pricing).
+- Download [Git](https://git-scm.com/downloads) for local use in your terminal.
+
+#### Configure Git
+
+Start the terminal so we can connect your Github account with git. First, set the your username and emailadres.
+
+```
+git config --global user.name "your github username"
+```
+
+```
+git config --global user.email "your email adress"
+```
+
+You can list the configuration to check if *user.name* and *user.email* are correct.
+
+```
+git config --list
+```
+
 ### 1.2 Set-up Ruby
+
+Jekyll is build with Ruby, so you'll have to installed it locally for your operating system. Use the official [installation instructions](https://jekyllrb.com/docs/installation/). Ruby uses RubyGems for package management and Jekyll is such a package or [*Gem*](https://rubygems.org/gems/jekyll).
 
 ## 2 Start a Jekyll project
 
@@ -27,14 +53,23 @@ In order to build a Jekyll website you'll have to set up a couple of requirement
 
 ## 4 Publish your website
 
-Jekyll can be hosted for free on a lot of places, like [Github Pages](https://pages.github.com/). For this post we are using [Digital Ocean](https://en.wikipedia.org/wiki/DigitalOcean). They allow you to publish up to 3 static websites for free on their [App Platform](https://docs.digitalocean.com/products/app-platform/).
+Jekyll can be hosted for free on a lot of places, like [Github Pages](https://pages.github.com/) or on the free tier at Digital Ocean, called [App Platform](https://docs.digitalocean.com/products/app-platform/).
 
-### 4.1 Create an account
+### 4.1 Publish via Github Pages
 
-### 4.2 Create an app
+You can follow along with the instructions, or go see the official [Github Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) for setting this up.
 
-### 4.3 Publish your website
+#### 4.1.1 Turn on Pages
+In order to publish your website on Github Pages, go to the page of your repository and navigate to *Settings* and then *Pages*.
 
-### 4.4 Get a proper domain
+#### 4.1.2 Create a new branch
+
+#### 4.1.3 
+
+
+
+### 4.2 Publish via Digital Ocean
+
+### 4.3 Get a proper domain
 
 ## 5 What's next
