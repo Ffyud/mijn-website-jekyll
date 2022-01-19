@@ -8,7 +8,7 @@ categories: [web, hosting]
 
 # Build a website with Jekyll and publish it
 
-With the [Jekyll](https://jekyllrb.com/) framework (or [static website](https://en.wikipedia.org/wiki/Static_web_page) generator), you can create a proper website in a short amount of time and with little technical knowledge.. 
+With the [Jekyll](https://jekyllrb.com/) framework (or [static website](https://en.wikipedia.org/wiki/Static_web_page) generator), you can create a proper website in a short amount of time and with little technical knowledge. 
 
 Websites made with Jekyll are simple, easy to maintain and versatile, since they are only static. Meaning it basically is just a bunch of files, without any database like for instance Wordpress needs. What's also nice is the fact that you can publish your website online for free on a lot of places, like Github Pages, Netlify or Digital Ocean.
 
@@ -16,16 +16,11 @@ Websites made with Jekyll are simple, easy to maintain and versatile, since they
 
 In order to build a Jekyll website you'll have to set up a couple of requirements on your own machine.
 
-- A Github account 
-- Git installed locally
-- Ruby
-
-### 1.1 Set-up Github
-
-- Register an account on [Github](https://github.com/pricing).
-- Download [Git](https://git-scm.com/downloads) for local use in your terminal.
-
-#### Configure Git
+- A Github account. Sign-up for an account [here](https://github.com/pricing).
+- [Git](https://git-scm.com/downloads) installed locally.
+- Ruby, which comes installed on MacOS and most of Linux by default.
+  
+#### Configuring Git
 
 Start the terminal so we can connect your Github account with git. First, set the your username and emailadres.
 
@@ -45,7 +40,13 @@ git config --list
 
 ### 1.2 Set-up Ruby
 
-Jekyll is build with Ruby, so you'll have to installed it locally for your operating system. Use the official [installation instructions](https://jekyllrb.com/docs/installation/). Ruby uses RubyGems for package management and Jekyll is such a package or [*Gem*](https://rubygems.org/gems/jekyll).
+Jekyll is build with Ruby, so you'll have to have it installed locally for your operating system. You can check if that is the case by checking it's version.
+
+```
+ruby -v
+```
+
+Use the official [installation instructions](https://jekyllrb.com/docs/installation/). Ruby uses RubyGems for package management. Jekyll is such a package or [*Gem*](https://rubygems.org/gems/jekyll).
 
 ## 2 Start a Jekyll project
 
@@ -59,12 +60,12 @@ Jekyll can be hosted for free on a lot of places, like [Github Pages](https://pa
 
 You can follow along with the instructions, or go see the official [Github Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) for setting this up.
 
-#### 4.1.1 Turn on Pages
+#### Turn on Pages
 In order to publish your website on Github Pages, go to the page of your repository and navigate to *Settings* and then *Pages*.
 
-#### 4.1.2 Create a new branch
+#### Create a new branch
 
-#### 4.1.3 
+####  
 
 
 
