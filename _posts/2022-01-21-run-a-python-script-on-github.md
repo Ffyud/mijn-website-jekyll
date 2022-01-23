@@ -17,10 +17,12 @@ For running a job that will be picked up by Github Actions, you'll have to set u
 - Create a folder with the name *.github*.
 - Inside that folder, create a folder with the name *workflows*.
 - Create a YAML file inside workflows with a name like *run-python.yml*.
-<!-- -->
-    .github/workflows/run-python.yml
 
-The YAML file is where you put the [Workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) that instructs Github what to do.
+```  
+  <repo>/.github/workflows/run-python.yml
+```
+
+The YAML file is where you put the [workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) that instructs Github what to do.
 
 ## 2 Building the actual job
 
@@ -51,7 +53,7 @@ Then you configure the actual job you want to run. This example will start a bui
 
 It will checkout your code (actions/checkout@v2), install Python (actions/setup-python@v2), install the relevant Python packages and run your actual Python script. 
     
-Lastly it will commit and push the resulting changes to the main branch.
+Lastly it will commit and push (ad-m/github-push-action@v0.6.0) the resulting changes to the main branch.
    
 ``` yaml
 jobs:
@@ -89,10 +91,10 @@ jobs:
           branch: main
 ```
 
-The full run-python.yml should look something like this. Keep in mind that the YAML will not work when the indentation is not correct. The nesting style of a YAML is comparable to Python.
+Keep in mind that the YAML will not work when the indentation is not correct. The nesting style of a YAML is comparable to Python. The full run-python.yml should look something like this:
 
 ``` yaml
-name: get-latest-offers
+name: run-python
 
 on:
   schedule:
