@@ -28,23 +28,34 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
 
 1. Provide a name for this job.
 
+        ``` yaml
         name: run-python
+        ```
 
 2. Pick a trigger to start the job. A common trigger is a push to Github.
 
+        ``` yaml
         on:
           push:
             branches:
               - main
+        ```
 
     Triggering the job on a schedule based on a [cron pattern](https://crontab.guru/#0_0_*_*_*) is also useful.
 
+        ``` yaml
         on:
           schedule:
             - cron: '0 0 * * *'
+        ```
 
-3. Configure the actual job you want to run. This example will start a build on the lastest version of Ubuntu. It will checkout your code (*actions/checkout@v2*), install Python (*actions/setup-python@v2*), install the relevant Python modules and run the actual python script. Then it will commit and push the resulting changes to the main branch.
+3. Configure the actual job you want to run. This example will start a build on the lastest version of Ubuntu. 
+ 
+    It will checkout your code (*actions/checkout@v2*), install Python (*actions/setup-python@v2*), install the relevant Python modules and run the actual python script. 
+    
+    Finally it will commit and push the resulting changes to the main branch.
    
+        ``` yaml
         jobs:
           build:
             runs-on: ubuntu-latest
@@ -77,7 +88,53 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
                 uses: ad-m/github-push-action@v0.6.0
                 with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: main  
+                  branch: main
+        ```
+
+<!--  -->
+The full run-python.yml will should look like this. Keep in mind that yml will not work when the tabbing is not correct.
+
+``` yaml
+name: get-latest-offers
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.2'
+          
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          
+      - name: execute py script
+        run: python3 <the-name-of-your-python-script>
+          
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "update data" -a
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  
+```
 
 ### 3 See it run
 
