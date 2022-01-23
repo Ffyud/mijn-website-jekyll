@@ -51,7 +51,7 @@ on:
 
 Then you configure the actual job you want to run. This example will start a build on the lastest version of Ubuntu. 
 
-It will checkout your code (`actions/checkout@v2`), install Python (`actions/setup-python@v2`), install the relevant Python packages and run your actual Python script. 
+It will checkout your code (actions/checkout@v2), install Python (actions/setup-python@v2), install the relevant Python packages and run your actual Python script. 
     
 Lastly it will commit and push the resulting changes to the main branch.
    
