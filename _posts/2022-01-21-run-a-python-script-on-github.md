@@ -6,19 +6,23 @@ categories: [Github, Python]
 
 # Run a Python script on Github
 
-Github provides a way for running scripts that exist in your repository, called [Github Actions](https://github.com/features/actions), which enables you to create a CI/CD pipeline. [TravisCI](https://www.travis-ci.com/) offers similiar functionality, but is [not for free anymore](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing), while Github still is.
+Github provides a way for running scripts that exist in your repository, called [Github Actions](https://github.com/features/actions). It enables you to build, package, publish, deploy, test and do other stuff with your project. [Travis CI](https://www.travis-ci.com/) offers similiar functionality, but is [not for free anymore](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing), while Github still is.
 
 ## A usecase for Python
 
-Running Python is also possible on Github. This might be handy if you have a Python script that collects data. Let Python collect the data, save it to a file and commit that new file back to your repository automatically.
+Running Python is posible on Github. There are workflows for [testing](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs-or-python?langId=py) or [publishing a Python package](https://github.com/actions/starter-workflows/blob/main/ci/python-publish.yml). You can also just run a Python script that generates something like a file and save that file in the repository, automatically.
 
-### 1 Create a workflow
+### Create a job
+
+For running a job that will be picked up by Github Actions, you'll have to set up the following folder structure in the repository.
 
 - Create a folder with the name *.github*.
 - Inside that folder, create a folder with the name *workflows*.
 - Create a .yml file inside *workflows* with a name like "run-python.yml".
+<!-- end of the list -->
+    .github/workflows/run-python.yml
 
-### 2 Create the syntax
+### 2 Create the job instructions
 
 The yml file is where you put the [Workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) that instructs Github what to do.
 
@@ -33,7 +37,7 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
             branches:
               - main
 
-    Triggering the job by a schedule is also usefull, based on a [cron pattern](https://crontab.guru/#0_0_*_*_*).
+    Triggering the job on a schedule based on a [cron pattern](https://crontab.guru/#0_0_*_*_*) is also useful.
 
         on:
           schedule:
@@ -74,4 +78,8 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
                 with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   branch: main  
+
+### 3 See it run
+
+Check out the newly created job under the *Actions* tab on the Github page of your repository. If you used the *on push* trigger, you'll see that it starts to run after you pushed the new workflow to Github.
 
