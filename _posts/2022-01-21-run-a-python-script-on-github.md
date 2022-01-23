@@ -16,9 +16,9 @@ Running Python is posible on Github. There are workflows for [testing](https://d
 
 For running a job that will be picked up by Github Actions, you'll have to set up the following folder structure in the repository.
 
-- Create a folder with the name *.github*.
-- Inside that folder, create a folder with the name *workflows*.
-- Create a .yml file inside *workflows* with a name like "run-python.yml".
+- Create a folder with the name `.github`.
+- Inside that folder, create a folder with the name `workflows`.
+- Create a .yml file inside workflows with a name like `run-python.yml`.
 <!-- end of the list -->
     .github/workflows/run-python.yml
 
@@ -32,7 +32,7 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
         name: run-python
         ```
 
-2. Pick a trigger to start the job. A common trigger is a push to Github.
+2. Pick a trigger to start the job, defined by [`on`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on). A common trigger is a push to Github.
 
         ``` yaml
         on:
@@ -51,7 +51,7 @@ The yml file is where you put the [Workflow syntax](https://docs.github.com/en/a
 
 3. Configure the actual job you want to run. This example will start a build on the lastest version of Ubuntu. 
  
-    It will checkout your code (*actions/checkout@v2*), install Python (*actions/setup-python@v2*), install the relevant Python modules and run the actual python script. 
+    It will checkout your code (`actions/checkout@v2`), install Python (`actions/setup-python@v2`), install the relevant Python modules and run the actual python script. 
     
     Finally it will commit and push the resulting changes to the main branch.
    
