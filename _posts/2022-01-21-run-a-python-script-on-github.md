@@ -6,13 +6,13 @@ categories: [Github, Python]
 
 # Run a Python script on Github
 
-Github provides a way for running scripts that exist in your repository, called [Github Actions](https://github.com/features/actions). It enables you to build, package, publish, deploy, test and do other stuff with your project. [Travis CI](https://www.travis-ci.com/) offers similiar functionality, but is [not for free anymore](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing), while Github still is.
+Github provides a way for running scripts that exist in your repository, called [Github Actions](https://github.com/features/actions). It enables you create to create a workflow to build, package, publish, deploy, test and do other stuff with your project. [Travis CI](https://www.travis-ci.com/) offers similiar functionality, but is [not for free anymore](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing), while Github still is.
 
 Running Python is posible on Github. There are workflows for [testing](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs-or-python?langId=py) or [publishing a Python package](https://github.com/actions/starter-workflows/blob/main/ci/python-publish.yml). You can also just run a Python script that generates something like a file and save that file in the repository, automatically.
 
 ## 1 Create a job
 
-For running a job that will be picked up by Github Actions, you'll have to set up the following folder structure in the root of your repository.
+For running a job that will be picked up by the Github workflow, you'll have to set up the following folder structure in the root of your repository.
 
 - Create a folder with the name *.github*.
 - Inside that folder, create a folder with the name *workflows*.
@@ -51,7 +51,7 @@ on:
 
 Then you configure the actual job you want to run. This example will start a build on the lastest version of Ubuntu. 
 
-It will checkout your code (actions/checkout@v2), install Python (actions/setup-python@v2), install the relevant Python packages and run your actual Python script. 
+It will checkout your code (actions/checkout@v2), install Python (actions/setup-python@v2), install the relevant Python packages and run your actual Python script. The actions, like *actions/checkout@v2* are handy scripts that you can find in the Github [marketplace](https://github.com/marketplace?type=actions). 
     
 Lastly it will commit and push (ad-m/github-push-action@v0.6.0) the resulting changes to the main branch.
    
