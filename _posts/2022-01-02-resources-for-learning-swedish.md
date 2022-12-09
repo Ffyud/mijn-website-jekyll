@@ -23,3 +23,11 @@ A good way to practice Swedish is listening or reading news in easy Swedish or *
 ## Google Translate extension
 Google Translate might not be the best way to translate your text, because it always tries to create coherent sentences even if your input does not make sense or contains mistakes. Despite that downside, I found a browser extension that enable you to use Google Translate directly on a selected word on a website very convenient. [Firefox has such an extension](https://addons.mozilla.org/nl/firefox/addon/to-google-translate/) and [Chrome too](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb).
 
+## Other interesting links
+
+- Download books from famous Swedish authors for free: [pcforalla.idg.se](https://pcforalla.idg.se/2.1054/1.661196/svenska-e-bok-gratis)
+- How do numbers sound in Swedish: [sv.speaklanguages.com/svenska/ordlista/nummer](https://sv.speaklanguages.com/svenska/ordlista/nummer)
+- Study guide called [Rivstart](https://digital.nok.se/web/site-711316/state-jurdcojtgara/front-page)
+- Swedish slang words: [http://www.slangopedia.se/](http://www.slangopedia.se/)
+- Take quizes: [https://www.loecsen.com/en/learn-swedish](https://www.loecsen.com/en/learn-swedish)
+- Watch Swedish public television: [https://www.svtplay.se/](https://www.svtplay.se/)
