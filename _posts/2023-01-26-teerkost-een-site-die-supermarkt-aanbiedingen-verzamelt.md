@@ -6,36 +6,36 @@ categories: [supermarkt, aanbiedingen, teerkost, boodschappen]
 
 # Teerkost, een site die supermarkt aanbiedingen verzamelt
 
-Begin 2022 kwam ik op het idee om een simpele website op te zetten die overzichtelijk de aanbiedingen van zoveel mogelijk (het liefst alle) supermarkten kan laten zien. Het doel is om snel te kunnen zien waar de interessante aanbiedingen zijn, op basis van winkel, categorie of kortingspercentage. Elke ochtend worden de aanbiedingen verzamelt.
+![image](https://teerkost.nl/logo192.png "Teerkost logo")   
 
-Teerkost is ontworpen om eruit te zien als een app. Zet hem dus vooral op het "homescreen" van je telefoon. 📱
+Begin 2022 kwam ik op het idee om een simpele website op te zetten die overzichtelijk de aanbiedingen van zoveel mogelijk (het liefst alle) supermarkten kan laten zien. Het doel is om snel te kunnen zien waar de interessante aanbiedingen zijn, op basis van winkel, categorie of kortingspercentage.
 
-Mocht je wit wat te wit vinden kan je het thema naar donker aanpassen (onder Opties).
+📱 Teerkost is ontworpen om eruit te zien als een app. Zet hem dus vooral op het "homescreen" van je telefoon. Mocht je wit wat te wit vinden kan je het thema naar donker aanpassen (onder Opties).
 
-### Wat kan je ermee?
+### Wat kan je er mee?
 
-#### 🛒 Filteren
+#### Filteren 🛒
 - Aanbiedingen kan je filteren op winkel. Op dit moment zijn dat de Albert Heijn, Jumbo, Lidl, Aldi, Ekoplaza, Dekamarkt, Dirk en Poiesz. 
 - Aanbiedingen kan je filteren op categorie. Deze categorieën zijn losjes verzonnen, en wat (nog) niet onder een categorie past staat achteraan onder de filter "geen-categorie".
 - Tot slot heb je een filter voor kortingspercentage. Verreweg de meeste aanbiedingen hebben een kortingspercentage, maar helaas niet allemaal.
-- De filters kan je combineren, zoals "Lidl" + "Vega" + ">=50%".
+- De pagina met filters kan je delen. Dus [teerkost.nl/#/lidl/vega](https://teerkost.nl/#/lidl/brood) stuurt je direct naar de brood aanbiedingen van de Lidl.
 
-#### 🔎 Zoeken
+#### Zoeken 🔎 
 Zoeken in alle aanbiedingen kan ook. Er wordt gekeken of je zoekterm in de titel of eventuele beschrijving voorkomt
 
-#### 💾 Bewaren
+#### Bewaren 💾
 - Een aanbieding kan je bewaren door op het bladwijzer-icoontje te klikken. Ze verschijnen dan op de bewaarpagina. 
 - De bewaarpagina kan je ook delen met anderen.
 - Vanuit de bewaarpagina kan je ook een boodschappenlijstje laten maken en deze kopieren naar bijvoorbeeld je mobiele telefoon.
 
-## ❤️ Genoemd op het internet
+### Genoemd op het internet ❤️
 
 Teerkost is al een paar keer genoemd op het internet:
 - Het Youtube kanaal [vetgezellig](https://www.youtube.com/@vetgezellig) noemt Teerkost in [dit filmpje](https://youtu.be/BC7MeNZcbi8).
 - De website [Voordeelcommunity](http://community.voordeel.com/conversations/vind-je-product-gemakkelijker-het-goedkoopst).
 - Het forum van xgratis.nl bespreekt Teerkost in dit [topic](https://xgratis.nl/forum/viewtopic.php?f=1&t=12166&p=65223&hilit=teerkost#p65223).
 
-## Vragen? 🧐
+### Vragen? 🧐
 - Ik mis een winkel, gaat deze nog toegevoegd worden?
 
 Er zijn een aantal winkel die nog niet toegevoegd zijn. Dat kost best wat werk, dus nog even geduld!
