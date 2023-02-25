@@ -8,17 +8,15 @@ categories: [supermarkt, aanbiedingen, teerkost, boodschappen]
 
 Begin 2022 kwam ik op het idee om een simpele website op te zetten die overzichtelijk de aanbiedingen van zoveel mogelijk (het liefst alle) supermarkten laat zien. Het doel is om snel te zien waar de interessante aanbiedingen zijn.
 
-🛒 **Aanbiedingen kan je filteren op winkel, categorie of kortingspercentage.** 
-
-Op dit moment staan de supermarkten Albert Heijn, Jumbo, Lidl, Aldi, Ekoplaza, Spar, Dekamarkt, Dirk, Poiesz en Hoogvliet erop. De categorieën zijn losjes verzonnen, en wat (nog) niet onder een categorie past staat achteraan onder de filter "geen-categorie". 
+🛒 **Aanbiedingen kan je filteren op winkel, categorie of kortingspercentage.** Op dit moment staan de supermarkten Albert Heijn, Jumbo, Lidl, Aldi, Ekoplaza, Spar, Dekamarkt, Dirk, Poiesz en Hoogvliet erop. De categorieën zijn losjes verzonnen, en wat (nog) niet onder een categorie past staat achteraan onder de filter "geen-categorie". 
 
 🔗 **Een pagina met filters kan je delen.** Dus [teerkost.nl/#/lidl/brood](https://teerkost.nl/#/lidl/brood) levert direct de brood aanbiedingen van de Lidl.
 
-🔎 **Zoeken in alle aanbiedingen kan ook.** Er wordt gekeken of je zoekterm in de titel of eventuele beschrijving voorkomt
+🔎 **Zoeken in alle aanbiedingen kan ook.** De meest recente zoekopdrachten worden bewaard en kan je dus makkelijk weer gebruiken.
 
-💾 **Een aanbieding kan je bewaren door op het bladwijzer-icoon te klikken.** Ze verschijnen dan op de bewaarpagina. De bewaarde aanbiedingen kan je ook delen met anderen. En vanuit de bewaarpagina kan je bovendien een boodschappenlijstje maken en deze kopieren naar bijvoorbeeld je mobiele telefoon.
+💾 **Een aanbieding kan je bewaren door op het bladwijzer-icoon te klikken.** Ze verschijnen dan op de bewaarpagina. De bewaarde aanbiedingen kan je ook delen met anderen. En vanuit de bewaarpagina kan je bovendien een boodschappenlijstje maken en deze kopieren naar bijvoorbeeld je smartphone.
 
-📱 **Teerkost is ontworpen om eruit te zien als een app.** Zet hem dus vooral op het beginscherm van je telefoon. En mocht je wit wat te wit vinden kan je het thema naar donker aanpassen (onder opties).
+📱 **Teerkost is ontworpen om eruit te zien als een app.** Zet hem dus vooral op het beginscherm van je smartphone. En mocht je wit wat te wit vinden kan je het thema naar donker aanpassen (onder opties).
 
 ❤️ **Teerkost is al eens genoemd op het internet:**
 - Het Youtube kanaal [vetgezellig](https://www.youtube.com/@vetgezellig) noemt Teerkost in [dit filmpje](https://youtu.be/BC7MeNZcbi8).
@@ -27,11 +25,7 @@ Op dit moment staan de supermarkten Albert Heijn, Jumbo, Lidl, Aldi, Ekoplaza, S
 
 🧐 **Ik mis een winkel, gaat deze nog toegevoegd worden?**
 
-Er zijn een aantal winkel die nog niet toegevoegd zijn. Dat kost best wat werk, dus nog even geduld!
-
-🧐 **Ik mis een aanbieding, hoe dan?**
-
-Het kan voorkomen dat ik een aanbieding heb gemist, misschien dat 'ie een dag later nog verschijnt. Het kan ook een lokale aanbieding zijn die lastig te vinden is.
+Er zijn een aantal winkels die nog niet toegevoegd zijn. Dat kost best wat werk, dus nog even geduld!
 
 🧐 **Mijn bewaarde aanbiedingen zijn weg?**
 
