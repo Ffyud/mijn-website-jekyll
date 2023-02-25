@@ -23,6 +23,9 @@ Begin 2022 kwam ik op het idee om een simpele website op te zetten die overzicht
 - De website [Voordeelcommunity](http://community.voordeel.com/conversations/vind-je-product-gemakkelijker-het-goedkoopst).
 - Het forum van xgratis.nl noemt Teerkost in dit [topic](https://xgratis.nl/forum/viewtopic.php?f=1&t=12166&p=65223&hilit=teerkost#p65223).
 
+💡 **Suggesties, bugs?**
+Laat het weten op [Twitter](https://twitter.com/davidffyud).
+
 🧐 **Ik mis een winkel, gaat deze nog toegevoegd worden?**
 
 Er zijn een aantal winkels die nog niet toegevoegd zijn. Dat kost best wat werk, dus nog even geduld!
