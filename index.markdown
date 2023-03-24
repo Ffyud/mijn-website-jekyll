@@ -8,8 +8,6 @@ Check out my news collecting website for the city of Groningen, called [Brakdag]
 
 Another project is [Teerkost](https://teerkost.nl) which collects current supermarket discounts and tries to present them in a fast and clear way.
 
-Also working on a [Jekyll](https://jekyllrb.com/) theme called [Paloma Jekyll](https://github.com/Ffyud/paloma-jekyll) (actually used on this website).
-
 <ul>
       {% for post in site.posts %}
       <li>
