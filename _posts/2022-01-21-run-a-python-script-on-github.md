@@ -16,7 +16,7 @@ For running a job that will be picked up by the Github workflow, you'll have to 
 
 - Create a folder with the name *.github*.
 - Inside that folder, create a folder with the name *workflows*.
-- Create a YAML file inside workflows with a name like *run-python.yml*.
+- Create a yaml file inside workflows with a name like *run-python.yml*.
 
 ```  
   <repo>/.github/workflows/run-python.yml
@@ -91,7 +91,7 @@ jobs:
           branch: main
 ```
 
-Keep in mind that the YAML will not work when the indentation is not correct. The nesting style of a YAML is comparable to Python. The full run-python.yml should look something like this:
+Keep in mind that the yaml will not work when the indentation is not correct. The nesting style of a yaml is comparable to Python. The full run-python.yml should look something like this:
 
 ``` yaml
 name: run-python

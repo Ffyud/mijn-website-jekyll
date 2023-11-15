@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Set-up a basic Gatling test"
-categories: [Testing]
+categories: [testing]
 ---
 
 # Set up a basic Gatling test
