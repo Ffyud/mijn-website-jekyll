@@ -8,10 +8,6 @@ categories: [supermarkt, aanbiedingen, teerkost, boodschappen]
 
 Begin 2022 kwam ik op het idee om een simpele website op te zetten die overzichtelijk de aanbiedingen van zoveel mogelijk (het liefst alle) supermarkten laat zien. Het doel is om snel te zien waar de interessante aanbiedingen zijn.
 
-💡 **Suggesties, bugs?**
-Laat het vooral weten via [Twitter](https://twitter.com/davidffyud) of per mail naar
-[d8io75c4a@mozmail.com](d8io75c4a@mozmail.com).
-
 🛒 **Aanbiedingen kan je filteren op winkel, categorie of kortingspercentage.** Op dit moment staan de supermarkten Albert Heijn, Jumbo, Lidl, Aldi, Plus, Ekoplaza, Spar, Dekamarkt, Dirk, Poiesz en Hoogvliet erop. De categorieën zijn losjes verzonnen, en wat (nog) niet onder een categorie past staat achteraan onder de filter "geen-categorie". 
 
 🔗 **Een pagina met filters kan je delen.** Dus [teerkost.nl/#/lidl/brood](https://teerkost.nl/#/lidl/brood) levert direct de brood aanbiedingen van de Lidl.
