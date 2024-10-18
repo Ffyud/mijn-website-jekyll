@@ -7,7 +7,7 @@ hidden: true
 
 ### Freeroamerweekend voor de Gameboy
 
-- [Download ROM]({{ site.url }}/assets/freeroamerweekend.gb)
+- [Download rom]({{ site.url }}/assets/freeroamerweekend.gb)
 - [Speel in browser](https://freeroamerweekend.davidduyff.nl)
 
 ![Freeroamerweekend cartridge]({{ site.url }}/assets/images/freeroamerweekend-cart.png)
