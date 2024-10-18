@@ -10,6 +10,9 @@ hidden: true
 - [Download ROM]()
 - [Speel in browser](https://freeroamerweekend.davidduyff.nl)
 
+![Freeroamerweekend cartridge](/assets/images/freeroamerweekend-card.jpg)
+
+
 ## Gemaakt met
 - [GB Studio](https://www.gbstudio.dev/)
 - Game assets van [itch.io](https://itch.io/game-assets)
