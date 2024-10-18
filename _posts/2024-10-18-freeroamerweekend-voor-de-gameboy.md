@@ -10,7 +10,7 @@ hidden: true
 - [Download ROM]()
 - [Speel in browser](https://freeroamerweekend.davidduyff.nl)
 
-![Freeroamerweekend cartridge]({{ site.url }}/assets/images/freeroamerweekend-card.png)
+![Freeroamerweekend cartridge]({{ site.url }}/assets/images/freeroamerweekend-cart.png)
 
 
 ## Gemaakt met
