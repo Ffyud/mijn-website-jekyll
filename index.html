@@ -41,17 +41,16 @@
     <section>
         <div class="projects">
             <ul class="horizontal-list">
-                <li><img width="230" alt="Screenshot van teerkost.nl" src="img/screenshot-teerkost.png" />
+                <li><img width="230" alt="Screenshot van teerkost.nl"
+                        src="{{ site.url }}/assets/screenshot-teerkost2.png" />
                     <span>teerkost.nl</span>
                 </li>
-                <!-- <li><img width="330" alt="Screenshot van teerkost.nl" src="img/screenshot-teerkost2.png" /><span></span>
-                </li> -->
                 <li><img width="230" alt="Screenshot van pluggar"
-                        src="img/screenshot-pluggar.png" /><span>ffyud.github.io/pluggar</span></li>
+                        src="{{ site.url }}/assets/screenshot-pluggar.png" /><span>ffyud.github.io/pluggar</span></li>
                 <li><img width="230" alt="Screenshot van urbaniteer.nl"
-                        src="img/screenshot-urbaniteer.png" /><span>urbaniteer.nl</span></li>
+                        src="{{ site.url }}/assets/screenshot-urbaniteer.png" /><span>urbaniteer.nl</span></li>
                 <li><img width="230" alt="Screenshot van stadjers-quiz.nl"
-                        src="img/screenshot-stadjers-quiz.png" /><span>stadjers-quiz.nl</span></li>
+                        src="{{ site.url }}/assets/screenshot-stadjers-quiz.png" /><span>stadjers-quiz.nl</span></li>
             </ul>
         </div>
     </section>
@@ -64,6 +63,18 @@
                 src="img/screenshot-freeroamerweekend2.png" />
         </div>
     </section> -->
+
+    <section>
+        <ul>
+            {% for post in site.posts %}
+            {% unless post.hidden %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endunless %}
+            {% endfor %}
+        </ul>
+    </section>
 
     <!-- Optional footer -->
     <footer>
