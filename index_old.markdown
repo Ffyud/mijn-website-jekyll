@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: home
 title: "Home"
 ---
@@ -19,4 +19,4 @@ title: "Home"
       </li>
         {% endunless %}
       {% endfor %}
-</ul>
+</ul> -->
